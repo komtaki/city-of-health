@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./bin:/app/bin
+      - ./public:/app/public
+      - ./src:/app/src
+      - ./package.json:/app/package.json
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./yarn.lock:/app/yarn.lock
+    ports:
+      - 3000:3000
