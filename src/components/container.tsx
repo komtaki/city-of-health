@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Link from 'next/link'
-import CssBaseline from '@mui/material/CssBaseline'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
@@ -17,8 +16,7 @@ type Props = {
 const Container: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <CssBaseline />
-      <AppBar position="static" color="transparent">
+      <AppBar position="static" color="primary">
         <MuiContainer maxWidth="md">
           <Toolbar variant="dense">
             <CurrencyYenIcon
@@ -28,7 +26,7 @@ const Container: React.FC<Props> = ({ children }) => {
               <a>
                 <Typography
                   variant="h6"
-                  color="inherit"
+                  color="white"
                   component="div"
                   sx={{ fontWeight: 600 }}
                 >
