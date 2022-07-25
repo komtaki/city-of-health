@@ -2,13 +2,13 @@ import Box from '@mui/material/Box'
 import { NextPage } from 'next'
 import Head from 'next/head'
 
-import Container from '../components/container'
+import Layout from '../components/Layout'
 import Text from '../components/Text'
 import { CMS_NAME } from '../lib/constants'
 
 const Privacy: NextPage = () => {
   return (
-    <Container>
+    <Layout>
       <article>
         <Head>
           <title>プライバシーポリシー | {CMS_NAME}</title>
@@ -106,7 +106,7 @@ const Privacy: NextPage = () => {
         </Box>
         <Text paragraph>2022 年 7 月 25 日　策定</Text>
       </article>
-    </Container>
+    </Layout>
   )
 }
 

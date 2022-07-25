@@ -10,7 +10,8 @@ import {
   getPrefectureById,
   getFinanceByPrefectureName,
 } from '../../lib/api'
-import Container from '../../components/container'
+import Layout from '../../components/Layout'
+import DataTable, { columns } from '../../components/DataTable'
 import Text from '../../components/Text'
 import Meta from '../../components/Meta'
 import JapanMap from '../../components/JapanMap'
@@ -59,7 +60,7 @@ const Prefecture: NextPage<Props> = ({ data, prefecture }) => {
           imageUrl: `/img/prefectures/${prefecture.id}.png`,
         }}
       />
-      <Container>
+      <Layout>
         <Box marginBottom={3}>
           <Box marginBottom={3}>
             <Text variant="h1" bold gutterBottom>
@@ -102,7 +103,7 @@ const Prefecture: NextPage<Props> = ({ data, prefecture }) => {
           他の都道府県を調べる
         </Text>
         <JapanMap />
-      </Container>
+      </Layout>
     </>
   )
 }

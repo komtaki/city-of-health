@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import Container from '../components/container'
+import Layout from '../components/Layout'
 import { CMS_NAME } from '../lib/constants'
 import Text from '../components/Text'
 import Meta from '../components/Meta'
@@ -16,10 +16,10 @@ const Index: NextPage = () => {
           imageUrl: `/img/top.png`,
         }}
       />
-      <Container>
+      <Layout>
         <Text>調べたい都道府県を選択してください。</Text>
         <JapanMap />
-      </Container>
+      </Layout>
     </>
   )
 }

@@ -1,0 +1,10 @@
+.footer {
+  width: 100%;
+  position: absolute;
+  padding: 3rem;
+
+  &__copyright {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
