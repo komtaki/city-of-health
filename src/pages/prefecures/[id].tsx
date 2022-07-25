@@ -10,8 +10,8 @@ import {
 } from '../../lib/api'
 import Alert from '@mui/material/Alert'
 import AlertTitle from '@mui/material/AlertTitle'
-import Typography from '@mui/material/Typography'
 import Box from '@mui/system/Box'
+import Text from '../../components/Text'
 
 const columns: GridColDef[] = [
   { field: 'name', headerName: '名前', width: 130 },
@@ -51,31 +51,26 @@ const Prefecture: NextPage<Props> = ({ data, prefecture }) => {
     <Container>
       <Box marginBottom={3}>
         <Box marginBottom={3}>
-          <Typography
-            variant="h3"
-            component="h1"
-            sx={{ fontWeight: 600 }}
-            gutterBottom
-          >
+          <Text variant="h3" component="h1" bold gutterBottom>
             {prefecture.name}の市区町村の財政健全度
-          </Typography>
-          <Typography gutterBottom>
+          </Text>
+          <Text gutterBottom>
             このデータは、
             <a href="https://www.e-stat.go.jp/">政府統計の総合窓口e-Stat</a>
             に掲載された2021年の地方財政状況調査を使用しています。
-          </Typography>
+          </Text>
         </Box>
 
         <Box marginBottom={3}>
           <Alert variant="outlined" severity="info">
             <AlertTitle>地方財政状況調査とは</AlertTitle>
 
-            <Typography gutterBottom>
+            <Text gutterBottom>
               都道府県や市町村など各地方公共団体の決算に関する統計調査で、統一的な会計区分が定められ予算の執行を通じて地方公共団体がどのように行政運営を行ったかを見るものです。
-            </Typography>
-            <Typography gutterBottom>
+            </Text>
+            <Text gutterBottom>
               毎年度、地方財政状況調査の結果を取りまとめ「地方財政白書」として国会に報告されます。これらは地方公共団体の歳入・歳出の分析や財政の健全性の判断において重要な役割を果たしています。
-            </Typography>
+            </Text>
           </Alert>
         </Box>
       </Box>
