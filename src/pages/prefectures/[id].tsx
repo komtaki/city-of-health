@@ -40,7 +40,9 @@ const Prefecture: NextPage<Props> = ({ data, prefecture }) => {
             </Text>
             <Text gutterBottom>
               このデータは、
-              <a href="https://www.e-stat.go.jp/">政府統計の総合窓口e-Stat</a>
+              <a href="https://www.e-stat.go.jp/" className="link-border">
+                政府統計の総合窓口e-Stat
+              </a>
               に掲載された2021年の地方財政状況調査を使用しています。
             </Text>
           </Box>
