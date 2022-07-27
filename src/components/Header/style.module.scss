@@ -1,3 +1,14 @@
+.wrapper {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+.serviceIcon {
+  width: 50px;
+  margin-right: 0.5rem;
+}
+
 .serviceName {
   display: inline;
 }

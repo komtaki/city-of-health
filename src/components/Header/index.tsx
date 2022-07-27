@@ -13,10 +13,11 @@ const Header: React.FC = () => {
   return (
     <header>
       <MuiContainer maxWidth="md">
-        <Box sx={{ padding: '1rem' }}>
+        <Box className={cssStyle['wrapper']}>
+          <img src="/img/serviceIcon.png" className={cssStyle['serviceIcon']} />
           <Link href="/">
             <a className={cssStyle['serviceName']}>
-              <Typography variant="h6" component="div" sx={{ fontWeight: 600 }}>
+              <Typography variant="h2" component="div" sx={{ fontWeight: 600 }}>
                 {CMS_NAME}
               </Typography>
             </a>
