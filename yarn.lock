@@ -1498,9 +1498,9 @@ negotiator@^0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
 
-next-sitemap@^2.5.24:
-  version "2.5.24"
-  resolved "https://registry.npmjs.org/next-sitemap/-/next-sitemap-2.5.24.tgz"
+next-sitemap@^2.5.28:
+  version "2.5.28"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.5.28.tgz#c061914edcc74268e43254710dec0a0febae5fa4"
   dependencies:
     "@corex/deepmerge" "^2.6.148"
     minimist "^1.2.6"
