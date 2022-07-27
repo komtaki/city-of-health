@@ -659,9 +659,9 @@ caniuse-lite@^1.0.30001332:
   version "1.0.30001338"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001338.tgz"
 
-canvas@^2.9.1:
-  version "2.9.1"
-  resolved "https://registry.npmjs.org/canvas/-/canvas-2.9.1.tgz"
+canvas@^2.9.3:
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/canvas/-/canvas-2.9.3.tgz#8723c4f970442d4cdcedba5221579f9660a58bdb"
   dependencies:
     "@mapbox/node-pre-gyp" "^1.0.0"
     nan "^2.15.0"
