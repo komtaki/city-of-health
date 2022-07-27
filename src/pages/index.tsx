@@ -3,6 +3,7 @@ import Container from '../components/container'
 import { CMS_NAME } from '../lib/constants'
 import Text from '../components/Text'
 import Meta from '../components/Meta'
+import JapanMap from '../components/JapanMap'
 
 const Index: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Index: NextPage = () => {
       />
       <Container>
         <Text>調べたい都道府県を選択してください。</Text>
+        <JapanMap />
       </Container>
     </>
   )

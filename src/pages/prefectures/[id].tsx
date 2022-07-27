@@ -13,6 +13,7 @@ import {
 import Container from '../../components/container'
 import Text from '../../components/Text'
 import Meta from '../../components/Meta'
+import JapanMap from '../../components/JapanMap'
 
 const columns: GridColDef[] = [
   { field: 'name', headerName: '名前', width: 130 },
@@ -97,6 +98,10 @@ const Prefecture: NextPage<Props> = ({ data, prefecture }) => {
             }}
           />
         </div>
+        <Text variant="h5" component="h2" bold>
+          他の都道府県を調べる
+        </Text>
+        <JapanMap />
       </Container>
     </>
   )
