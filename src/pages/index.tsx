@@ -79,6 +79,7 @@ const Index: NextPage<Props> = ({ data }) => {
                 Field.prefectureName,
                 Field.name,
                 Field.power,
+                Field.population,
               ]}
               pageSize={maxSize}
               requiredToolBar={false}

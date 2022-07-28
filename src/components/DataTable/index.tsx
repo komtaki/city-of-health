@@ -10,6 +10,7 @@ export const Field = {
   prefectureName: 'prefectureName',
   name: 'name',
   power: 'power',
+  population: 'population',
 } as const
 
 type Field = keyof typeof Field
@@ -23,6 +24,13 @@ const columns = [
     headerName: '財政力指数',
     description:
       '地方公共団体の財政力を示す指数。基準財政収入額を基準財政需要額で除して得た数値の過去3年間の平均。1に近くあるいは1を超えるほど財源に余裕がある。',
+    type: 'number',
+    width: 130,
+  },
+  {
+    field: Field.population,
+    headerName: '人口',
+    description: '住民台帳に紐づく人口',
     type: 'number',
     width: 130,
   },

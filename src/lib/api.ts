@@ -21,6 +21,7 @@ export const getAllFinance = (): Finance[] => {
         prefectureName: record[1],
         name: record[2],
         power: record[3],
+        population: record[8],
       }
     })
 }

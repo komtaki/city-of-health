@@ -62,7 +62,7 @@ const Prefecture: NextPage<Props> = ({ data, prefecture }) => {
         </Box>
         <DataTable
           data={data}
-          fields={[Field.ranking, Field.name, Field.power]}
+          fields={[Field.ranking, Field.name, Field.power, Field.population]}
           pageSize={pageSize}
         />
         <Text variant="h2" bold>
