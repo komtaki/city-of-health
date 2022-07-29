@@ -5,7 +5,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import MuiContainer from '@mui/material/Container'
 
-import { CMS_NAME } from '../../lib/constants'
+import { CMS_NAME } from '../../../lib/constants'
 
 import cssStyle from './style.module.scss'
 

@@ -2,7 +2,7 @@ import * as React from 'react'
 import Box from '@mui/material/Box'
 import MuiContainer from '@mui/material/Container'
 
-import { CMS_NAME } from '../../lib/constants'
+import { CMS_NAME } from '../../../lib/constants'
 import Footer from '../Footer'
 import Header from '../Header'
 

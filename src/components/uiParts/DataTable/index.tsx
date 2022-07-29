@@ -22,8 +22,6 @@ const columns = [
   {
     field: Field.power,
     headerName: '財政力指数',
-    description:
-      '地方公共団体の財政力を示す指数。基準財政収入額を基準財政需要額で除して得た数値の過去3年間の平均。1に近くあるいは1を超えるほど財源に余裕がある。',
     type: 'number',
     width: 130,
   },

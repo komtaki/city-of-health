@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { CMS_NAME, CMD_DOMAIN_URL } from '../../lib/constants'
+import { CMS_NAME, CMD_DOMAIN_URL } from '../../../lib/constants'
 
 type Props = {
   og?: {

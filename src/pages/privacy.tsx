@@ -2,8 +2,8 @@ import Box from '@mui/material/Box'
 import { NextPage } from 'next'
 import Head from 'next/head'
 
-import Layout from '../components/Layout'
-import Text from '../components/Text'
+import Layout from '../components/uiParts/Layout'
+import Text from '../components/uiParts/Text'
 import { CMS_NAME } from '../lib/constants'
 
 const Privacy: NextPage = () => {
@@ -61,10 +61,7 @@ const Privacy: NextPage = () => {
             Google アナリティクスの Cookie は、26
             ヶ月間保持されます。この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。Google
             アナリティクスの利用規約に関して確認したい場合は、
-            <a
-              href="https://marketingplatform.google.com/about/analytics/terms/jp/"
-              className="link-border"
-            >
+            <a href="https://marketingplatform.google.com/about/analytics/terms/jp/">
               こちら
             </a>
             を確認してください。
@@ -72,10 +69,7 @@ const Privacy: NextPage = () => {
           <Text paragraph>
             また、「ユーザーが Google パートナーのサイトやアプリを使用する際の
             Google によるデータ使用」に関して確認したい場合は、
-            <a
-              href="https://policies.google.com/technologies/partner-sites?hl=ja"
-              className="link-border"
-            >
+            <a href="https://policies.google.com/technologies/partner-sites?hl=ja">
               こちら
             </a>
             を確認してください。
