@@ -76,6 +76,7 @@ const DataTable: React.FC<Props> = ({
       columns={generateColumns(fields)}
       disableColumnFilter
       disableColumnSelector
+      disableSelectionOnClick
       disableDensitySelector
       pageSize={pageSize}
       rowsPerPageOptions={[5]}
