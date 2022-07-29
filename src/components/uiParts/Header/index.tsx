@@ -17,7 +17,7 @@ const Header: React.FC = () => {
           <img src="/img/serviceIcon.png" className={cssStyle['serviceIcon']} />
           <Link href="/">
             <a className={cssStyle['serviceName']}>
-              <Typography variant="h2" component="div" sx={{ fontWeight: 600 }}>
+              <Typography variant="h5" component="div" sx={{ fontWeight: 600 }}>
                 {CMS_NAME}
               </Typography>
             </a>

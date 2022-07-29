@@ -96,7 +96,7 @@ try {
 
   getAllPrefectures().forEach((prefecture) => {
     const targetFile = path.join(targetDir, `${prefecture.id}.png`)
-    generateImage(`${prefecture.name}の財政健全度ランキング`, targetFile)
+    generateImage(`${prefecture.name}の財政力指数ランキング`, targetFile)
     console.log(`generated ${targetFile}`)
   })
 } catch (e) {
