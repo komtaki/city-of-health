@@ -26,8 +26,8 @@ const Index: NextPage<Props> = ({ data }) => {
   return (
     <>
       <Meta
-        title={`市区町村の財政ランキング`}
-        description={`政府統計をベースに算出した都道府県の市区町村の財政ランキングです。2020年の1位は${data[0].prefectureName}${data[0].name}、2位は${data[1].prefectureName}${data[1].name}、3位は${data[2].prefectureName}${data[2].name}でした。`}
+        title={`市区町村の財政指数ランキング`}
+        description={`政府統計から算出した全国の市区町村の財政指数ランキングです。2020年の1位は${data[0].prefectureName}${data[0].name}、2位は${data[1].prefectureName}${data[1].name}、3位は${data[2].prefectureName}${data[2].name}でした。`}
         og={{
           url: '/',
           imageUrl: `/img/top.png`,
@@ -52,10 +52,10 @@ const Index: NextPage<Props> = ({ data }) => {
           <Grid item xs={12}>
             <Box marginBottom={3}>
               <Text variant="h2" gutterBottom>
-                全国の財政力ランキング TOP {maxSize}
+                全国の財政力指数 TOP {maxSize}
               </Text>
               <Text gutterBottom>
-                2020年の政府統計の地方財政状況調査から算出した市区町村の財政力ランキングです。
+                2020年の政府統計の地方財政状況調査から算出した全国の市区町村の財政力指数ランキングです。
               </Text>
               <Text gutterBottom>
                 1位は{data[0].prefectureName}

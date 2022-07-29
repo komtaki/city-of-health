@@ -28,8 +28,8 @@ const Prefecture: NextPage<Props> = ({ data, prefecture }) => {
   return (
     <>
       <Meta
-        title={`${prefecture.name}の市区町村の財政力ランキング`}
-        description={`政府統計をベースに算出した${prefecture.name}の市区町村の財政力ランキングです。2020年の1位は${data[0].name}、2位は${data[1].name}、3位は${data[2].name}でした。`}
+        title={`${prefecture.name}の財政力指数ランキング`}
+        description={`政府統計から算出した${prefecture.name}の市区町村の財政力指数ランキングです。2020年の1位は${data[0].name}、2位は${data[1].name}、3位は${data[2].name}でした。`}
         og={{
           url: `/prefectures/${prefecture.id}/`,
           imageUrl: `/img/prefectures/${prefecture.id}.png`,
@@ -38,11 +38,11 @@ const Prefecture: NextPage<Props> = ({ data, prefecture }) => {
       <Layout>
         <Box marginBottom={3}>
           <Text variant="h1" bold gutterBottom>
-            {prefecture.name}の市区町村の財政力ランキング
+            {prefecture.name}の財政力指数ランキング
           </Text>
           <Text gutterBottom>
             2020年の政府統計の地方財政状況調査から算出した{prefecture.name}
-            の市区町村の財政力ランキングです。
+            の市区町村の財政力指数ランキングです。
           </Text>
           <Text gutterBottom>
             1位は{data[0].name}
