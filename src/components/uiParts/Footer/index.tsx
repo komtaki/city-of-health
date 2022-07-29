@@ -18,12 +18,12 @@ const Footer = () => {
         spacing={2}
       >
         <Grid item>
-          <Typography variant="body1">
+          <Typography variant="body2">
             <Link href="/privacy/">プライバシーポリシー</Link>
           </Typography>
         </Grid>
         <Grid item>
-          <Typography variant="body1">
+          <Typography variant="body2">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeFs26WtYyW1_nFo75FUnZrD0UIUcZQUqLT8fc8XbcPk8P2MQ/viewform?usp=sf_link"
               target="_blank"
@@ -33,7 +33,7 @@ const Footer = () => {
           </Typography>
         </Grid>
         <Grid item>
-          <Typography variant="body1">
+          <Typography variant="body2">
             <a href="https://www.komtaki.com" target="_blank">
               開発者のブログ
             </a>
