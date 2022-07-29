@@ -18,19 +18,19 @@ const Footer = () => {
         spacing={2}
       >
         <Grid item>
-          <Link href="/privacy/">
-            <a>
-              <Typography variant="body1">プライバシーポリシー</Typography>
-            </a>
-          </Link>
+          <Typography variant="body1">
+            <Link href="/privacy/">プライバシーポリシー</Link>
+          </Typography>
         </Grid>
         <Grid item>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeFs26WtYyW1_nFo75FUnZrD0UIUcZQUqLT8fc8XbcPk8P2MQ/viewform?usp=sf_link"
-            target="_blank"
-          >
-            <Typography variant="body1">お問い合わせ</Typography>
-          </a>
+          <Typography variant="body1">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeFs26WtYyW1_nFo75FUnZrD0UIUcZQUqLT8fc8XbcPk8P2MQ/viewform?usp=sf_link"
+              target="_blank"
+            >
+              お問い合わせ
+            </a>
+          </Typography>
         </Grid>
         <Grid item xs={12} className={classes['footer__copyright']}>
           <Typography variant="caption">©2022 City Of Health.</Typography>
