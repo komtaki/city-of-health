@@ -32,8 +32,17 @@ const Footer = () => {
             </a>
           </Typography>
         </Grid>
+        <Grid item>
+          <Typography variant="body1">
+            <a href="https://www.komtaki.com" target="_blank">
+              開発者のブログ
+            </a>
+          </Typography>
+        </Grid>
         <Grid item xs={12} className={classes['footer__copyright']}>
-          <Typography variant="caption">©2022 City Of Health.</Typography>
+          <Typography variant="caption">
+            ©2022 city-finance.komtaki.com
+          </Typography>
         </Grid>
       </Grid>
     </footer>
