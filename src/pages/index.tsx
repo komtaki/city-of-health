@@ -54,15 +54,11 @@ const Index: NextPage<Props> = ({ topData, worstData }) => {
 
                 <FinancePowerReference />
 
-                <Text gutterBottom>
-                  人口減少で地方の過疎化が進む現代、もし自治体が財政破綻すれば小中学校などの公共インフラは大きな影響を受けます。
+                <Text paragraph>
+                  人口減少で地方の過疎化が進む現代、もし自治体が財政破綻すれば小中学校などの公共インフラは大きな影響を受けます。そうなる前に、移住先や今住んでいる市区町村の財政がわかれば準備ができます。
                 </Text>
 
-                <Text gutterBottom>
-                  そうなる前に、移住先や今住んでいる市区町村の財政がわかれば、準備ができます。
-                </Text>
-
-                <Text gutterBottom>
+                <Text bold gutterBottom>
                   まずは気になる都道府県や市区町村の名前で検索してみましょう。
                 </Text>
               </Grid>
