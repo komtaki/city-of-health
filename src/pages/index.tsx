@@ -17,17 +17,18 @@ import DataReference from '../components/projects/DataReference'
 import FinancePowerReference from '../components/projects/FinancePowerReference'
 
 type Props = {
-  data: Finance[]
+  topData: Finance[]
+  worstData: Finance[]
 }
 
 const maxSize = 25
 
-const Index: NextPage<Props> = ({ data }) => {
+const Index: NextPage<Props> = ({ topData, worstData }) => {
   return (
     <>
       <Meta
         title={`市区町村の財政指数ランキング`}
-        description={`政府統計から算出した全国の市区町村の財政指数ランキングです。2020年の1位は${data[0].prefectureName}${data[0].name}、2位は${data[1].prefectureName}${data[1].name}、3位は${data[2].prefectureName}${data[2].name}でした。`}
+        description={`政府統計から算出した全国の市区町村の財政指数ランキングです。2020年の1位は${topData[0].prefectureName}${topData[0].name}、2位は${topData[1].prefectureName}${topData[1].name}、3位は${topData[2].prefectureName}${topData[2].name}でした。`}
         og={{
           url: '/',
           imageUrl: `/img/top.png`,
@@ -35,6 +36,59 @@ const Index: NextPage<Props> = ({ data }) => {
       />
       <Layout>
         <Grid container spacing={6}>
+          <Grid item xs={12}>
+            <Grid container spacing={3}>
+              <Grid item xs={12}>
+                <Text
+                  variant="h2"
+                  align="center"
+                  sx={{ fontWeight: 600 }}
+                  gutterBottom
+                >
+                  「{CMS_NAME}」の使い方
+                </Text>
+
+                <Text paragraph>
+                  政府統計から算出した全国の市区町村の財政力指数ランキングを掲載しています。
+                </Text>
+
+                <FinancePowerReference />
+
+                <Text gutterBottom>
+                  人口減少で地方の過疎化が進む現代、もし自治体が財政破綻すれば小中学校などの公共インフラは大きな影響を受けます。
+                </Text>
+
+                <Text gutterBottom>
+                  そうなる前に、移住先や今住んでいる市区町村の財政がわかれば、準備ができます。
+                </Text>
+
+                <Text gutterBottom>
+                  まずは気になる都道府県や市区町村の名前で検索してみましょう。
+                </Text>
+              </Grid>
+            </Grid>
+          </Grid>
+
+          <Grid item xs={12}>
+            <Divider />
+          </Grid>
+
+          <Grid item xs={12}>
+            <Text
+              variant="h2"
+              align="center"
+              sx={{ fontWeight: 600 }}
+              gutterBottom
+            >
+              データの参照元
+            </Text>
+            <DataReference />
+          </Grid>
+
+          <Grid item xs={12}>
+            <Divider />
+          </Grid>
+
           <Grid item xs={12}>
             <Text
               variant="h2"
@@ -46,9 +100,11 @@ const Index: NextPage<Props> = ({ data }) => {
             </Text>
             <JapanMap />
           </Grid>
+
           <Grid item xs={12}>
             <Divider />
           </Grid>
+
           <Grid item xs={12}>
             <Box marginBottom={3}>
               <Text variant="h2" gutterBottom>
@@ -58,19 +114,17 @@ const Index: NextPage<Props> = ({ data }) => {
                 2020年の政府統計の地方財政状況調査から算出した全国の市区町村の財政力指数ランキングです。
               </Text>
               <Text gutterBottom>
-                1位は{data[0].prefectureName}
-                {data[0].name}、 2位は
-                {data[1].prefectureName}
-                {data[1].name}、3位は
-                {data[2].prefectureName}
-                {data[2].name}でした。
+                1位は{topData[0].prefectureName}
+                {topData[0].name}、 2位は
+                {topData[1].prefectureName}
+                {topData[1].name}、3位は
+                {topData[2].prefectureName}
+                {topData[2].name}でした。
               </Text>
             </Box>
 
-            <FinancePowerReference />
-
             <DataTable
-              data={data}
+              data={topData}
               fields={[
                 Field.ranking,
                 Field.prefectureName,
@@ -81,8 +135,34 @@ const Index: NextPage<Props> = ({ data }) => {
               pageSize={maxSize}
               requiredToolBar={false}
             />
+          </Grid>
+          <Grid item xs={12}>
+            <Divider />
+          </Grid>
+          <Grid item xs={12}>
+            <Box marginBottom={3}>
+              <Text variant="h2" gutterBottom>
+                全国の財政力指数 WORST {maxSize}
+              </Text>
+              <Text gutterBottom>
+                最下位は{worstData[maxSize - 1].prefectureName}
+                {worstData[maxSize - 1].name}でした。
+              </Text>
+            </Box>
 
-            <DataReference />
+            <DataTable
+              data={worstData}
+              fields={[
+                Field.ranking,
+                Field.prefectureName,
+                Field.name,
+                Field.power,
+                Field.population,
+              ]}
+              sort="asc"
+              pageSize={maxSize}
+              requiredToolBar={false}
+            />
           </Grid>
         </Grid>
       </Layout>
@@ -91,11 +171,14 @@ const Index: NextPage<Props> = ({ data }) => {
 }
 
 export async function getStaticProps() {
-  const data = sortAndAddRanking(getAllFinance()).slice(0, maxSize)
+  const sortedData = sortAndAddRanking(getAllFinance())
+  const worstData = sortedData.slice(-maxSize)
+  const topData = sortedData.slice(0, maxSize)
 
   return {
     props: {
-      data,
+      topData,
+      worstData,
     },
   }
 }

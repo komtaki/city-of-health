@@ -16,9 +16,9 @@ export const Field = {
 type Field = keyof typeof Field
 
 const columns = [
-  { field: Field.ranking, headerName: '順位', width: 50 },
-  { field: Field.prefectureName, headerName: '都道府県', width: 130 },
-  { field: Field.name, headerName: '名前', width: 130 },
+  { field: Field.ranking, headerName: '順位', width: 70 },
+  { field: Field.prefectureName, headerName: '都道府県', width: 120 },
+  { field: Field.name, headerName: '名前', width: 120 },
   {
     field: Field.power,
     headerName: '財政力指数',
@@ -56,12 +56,14 @@ type Props = {
   pageSize: number
   data: GridRowsProp
   requiredToolBar?: boolean
+  sort?: 'desc' | 'asc'
 }
 
 const DataTable: React.FC<Props> = ({
   fields,
   data,
   pageSize,
+  sort = 'desc',
   requiredToolBar = true,
 }) => (
   <div
@@ -82,7 +84,7 @@ const DataTable: React.FC<Props> = ({
       rowsPerPageOptions={[5]}
       initialState={{
         sorting: {
-          sortModel: [{ field: 'power', sort: 'desc' }],
+          sortModel: [{ field: 'power', sort }],
         },
       }}
       components={
