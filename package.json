@@ -7,7 +7,7 @@
     "format": "prettier -w ./src",
     "typecheck": "tsc",
     "postbuild": "next-sitemap",
-    "ogp": "node ./bin/ogImage/create.js"
+    "ogp": "node --loader ts-node/esm ./bin/ogImage/create.mts"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",

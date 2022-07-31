@@ -1,22 +1,32 @@
-const { createCanvas, registerFont, loadImage } = require('canvas')
-const fs = require('fs')
-const path = require('path')
-const { parse } = require('csv-parse/sync')
+import {
+  createCanvas,
+  registerFont,
+  loadImage,
+  CanvasRenderingContext2D,
+} from 'canvas'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import { parse } from 'csv-parse/sync'
 
-const getContents = (filename) => {
+const __filename = fileURLToPath(import.meta.url)
+
+const __dirname = path.dirname(__filename)
+
+const getContents = (filename: string) => {
   const dataDirectory = path.join(process.cwd(), 'data')
   const fileContents = fs.readFileSync(`${dataDirectory}${filename}`, 'utf8')
 
   return parse(fileContents, { cast: true, fromLine: 2 })
 }
 
-const getAllPrefectures = () => {
-  return getContents('/prefectures.csv').map((prefecture) => {
+const getAllPrefectures = (): { id: number; name: string }[] => {
+  return getContents('/prefectures.csv').map((prefecture: any) => {
     return { id: prefecture[0], name: prefecture[1] }
   })
 }
 
-const getBase = (sum) => {
+const getBase = (sum: number) => {
   switch (sum) {
     case 1:
       return { rate: 2.6, additionalHeight: 38 }
@@ -32,20 +42,20 @@ const getBase = (sum) => {
 const size = { width: 600, height: 315 }
 const LINE_HEIGHT = 30
 
-const getH = (sum, current) => {
+const getH = (sum: number, current: number) => {
   const { rate, additionalHeight } = getBase(sum)
   const base = (size.height * rate) / 7
 
   return base + additionalHeight * current
 }
 
-const renderText = (ctx, title) => {
+const renderText = (ctx: CanvasRenderingContext2D, title: string) => {
   // タイトルを元の画像にセットする
   const lines = title.replace('\\n', '\n').split('\n')
   const maxWidth = 500
   const w = size.width / 2
   const sum = lines.length
-  const write = (text, h) => {
+  const write = (text: string, h: number) => {
     ctx.fillText(text, w, h, maxWidth)
   }
 
@@ -60,7 +70,7 @@ const renderText = (ctx, title) => {
   }
 }
 
-const generateImage = async (text, outputPath) => {
+const generateImage = async (text: string, outputPath: string) => {
   const cvs = createCanvas(size.width, size.height)
   const ctx = cvs.getContext('2d')
 
@@ -81,7 +91,7 @@ const generateImage = async (text, outputPath) => {
 
   const buf = cvs.toBuffer('image/png')
 
-  if (fs.existsSync(path)) {
+  if (fs.existsSync(outputPath)) {
     fs.unlinkSync(outputPath)
   }
 
