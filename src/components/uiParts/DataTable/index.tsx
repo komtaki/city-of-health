@@ -34,7 +34,7 @@ const columns = [
   },
 ]
 
-type FinanceWithRanking = Finance & {
+export type FinanceWithRanking = Finance & {
   ranking: number
 }
 

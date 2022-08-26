@@ -12,23 +12,37 @@ import JapanMap from '../components/uiParts/JapanMap'
 import DataTable, {
   Field,
   sortAndAddRanking,
+  FinanceWithRanking,
 } from '../components/uiParts/DataTable'
 import DataReference from '../components/projects/DataReference'
 import FinancePowerReference from '../components/projects/FinancePowerReference'
 
 type Props = {
-  topData: Finance[]
-  worstData: Finance[]
+  topData: FinanceWithRanking[]
+  worstData: FinanceWithRanking[]
 }
 
 const maxSize = 25
 
 const Index: NextPage<Props> = ({ topData, worstData }) => {
+  const getNameWithPrefecture = (finance: Finance) =>
+    `${finance.prefectureName}${finance.name}`
+
+  const worstCitiesText = worstData
+    .filter((value) => value.ranking === worstData[maxSize - 1].ranking)
+    .map((value) => getNameWithPrefecture(value))
+
   return (
     <>
       <Meta
         title={`市区町村の財政指数ランキング`}
-        description={`政府統計から算出した全国の市区町村の財政指数ランキングです。2020年の1位は${topData[0].prefectureName}${topData[0].name}、2位は${topData[1].prefectureName}${topData[1].name}、3位は${topData[2].prefectureName}${topData[2].name}でした。`}
+        description={`政府統計から算出した全国の市区町村の財政指数ランキングです。2020年の1位は${getNameWithPrefecture(
+          topData[0]
+        )}、2位は${getNameWithPrefecture(
+          topData[1]
+        )}、3位は${getNameWithPrefecture(
+          topData[2]
+        )}でした。最下位は${worstCitiesText.join('と')}でした。`}
         og={{
           url: '/',
           imageUrl: `/img/top.png`,
@@ -110,12 +124,9 @@ const Index: NextPage<Props> = ({ topData, worstData }) => {
                 2020年の政府統計の地方財政状況調査から算出した全国の市区町村の財政力指数ランキングです。
               </Text>
               <Text gutterBottom>
-                1位は{topData[0].prefectureName}
-                {topData[0].name}、 2位は
-                {topData[1].prefectureName}
-                {topData[1].name}、3位は
-                {topData[2].prefectureName}
-                {topData[2].name}でした。
+                1位は{getNameWithPrefecture(topData[0])}、2位は
+                {getNameWithPrefecture(topData[1])}、3位は
+                {getNameWithPrefecture(topData[2])}でした。
               </Text>
             </Box>
 
@@ -141,8 +152,7 @@ const Index: NextPage<Props> = ({ topData, worstData }) => {
                 全国の財政力指数 WORST {maxSize}
               </Text>
               <Text gutterBottom>
-                最下位は{worstData[maxSize - 1].prefectureName}
-                {worstData[maxSize - 1].name}でした。
+                最下位は{worstCitiesText.join('と')}でした。
               </Text>
             </Box>
 
