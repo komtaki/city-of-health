@@ -38,15 +38,25 @@ type FinanceWithRanking = Finance & {
   ranking: number
 }
 
-export const sortAndAddRanking = (data: Finance[]): FinanceWithRanking[] =>
-  data
-    .sort((a: Finance, b: Finance) => {
-      return a.power > b.power ? -1 : 1 // オブジェクトの昇順ソート
-    })
-    .map((datum, i) => ({
+export const sortAndAddRanking = (data: Finance[]): FinanceWithRanking[] => {
+  const sortedData = data.sort((a: Finance, b: Finance) => {
+    return a.power > b.power ? -1 : 1 // オブジェクトの昇順ソート
+  })
+
+  let ranking = 1
+  return sortedData.map((datum, i) => {
+    if (i === 0 || sortedData[i - 1].power === sortedData[i].power) {
+      // 同率順位
+    } else {
+      ranking = i + 1
+    }
+
+    return {
       ...datum,
-      ranking: i + 1,
-    }))
+      ranking,
+    }
+  })
+}
 
 const generateColumns = (fields: Field[]): GridColDef[] =>
   columns.filter((column) => fields.includes(column.field))
