@@ -28,7 +28,7 @@
     "@types/node": "^18.7.15",
     "@types/react": "^17.0.6",
     "@types/react-dom": "^17.0.5",
-    "canvas": "^2.10.0",
+    "canvas": "^2.10.1",
     "nan": "^2.16.0",
     "next-sitemap": "^2.5.28",
     "prettier": "^2.7.1",
