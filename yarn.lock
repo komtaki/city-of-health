@@ -339,9 +339,9 @@
   version "12.2.5"
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.2.5.tgz#20fed129b04a0d3f632c6d0de135345bb623b1e4"
 
-"@npmcli/arborist@^5.6.1":
-  version "5.6.1"
-  resolved "https://registry.yarnpkg.com/@npmcli/arborist/-/arborist-5.6.1.tgz#8371fe6e38f2d9ebc57a77be9ac0a8276564aa07"
+"@npmcli/arborist@^5.6.2":
+  version "5.6.2"
+  resolved "https://registry.yarnpkg.com/@npmcli/arborist/-/arborist-5.6.2.tgz#552b554f34777e5dcc8e68ad86cdaeebc0788790"
   dependencies:
     "@isaacs/string-locale-compare" "^1.1.0"
     "@npmcli/installed-package-contents" "^1.0.7"
@@ -1330,11 +1330,11 @@ libnpmdiff@^4.0.5:
     pacote "^13.6.1"
     tar "^6.1.0"
 
-libnpmexec@^4.0.12:
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/libnpmexec/-/libnpmexec-4.0.12.tgz#462955cdc80894122a09720ccb86e074989ab209"
+libnpmexec@^4.0.13:
+  version "4.0.13"
+  resolved "https://registry.yarnpkg.com/libnpmexec/-/libnpmexec-4.0.13.tgz#6688bd6c02cac31a32d2e56680c3884948cbf453"
   dependencies:
-    "@npmcli/arborist" "^5.6.1"
+    "@npmcli/arborist" "^5.6.2"
     "@npmcli/ci-detect" "^2.0.0"
     "@npmcli/fs" "^2.1.1"
     "@npmcli/run-script" "^4.2.0"
@@ -1349,11 +1349,11 @@ libnpmexec@^4.0.12:
     semver "^7.3.7"
     walk-up-path "^1.0.0"
 
-libnpmfund@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/libnpmfund/-/libnpmfund-3.0.3.tgz#334a3bb58c64ad18803056373545f6528b04dceb"
+libnpmfund@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/libnpmfund/-/libnpmfund-3.0.4.tgz#be1fd46bcfa9432660f98d935135d7ee3e620239"
   dependencies:
-    "@npmcli/arborist" "^5.6.1"
+    "@npmcli/arborist" "^5.6.2"
 
 libnpmhook@^8.0.4:
   version "8.0.4"
@@ -1729,12 +1729,12 @@ npm-user-validate@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/npm-user-validate/-/npm-user-validate-1.0.1.tgz"
 
-npm@^8.19.1:
-  version "8.19.1"
-  resolved "https://registry.yarnpkg.com/npm/-/npm-8.19.1.tgz#78bfc5fc1b7bc36881a2d9d1f2c93ad0246f31e5"
+npm@^8.19.2:
+  version "8.19.2"
+  resolved "https://registry.yarnpkg.com/npm/-/npm-8.19.2.tgz#db90e88584d065f51b069ab46b4f02f5cf4898b7"
   dependencies:
     "@isaacs/string-locale-compare" "^1.1.0"
-    "@npmcli/arborist" "^5.6.1"
+    "@npmcli/arborist" "^5.6.2"
     "@npmcli/ci-detect" "^2.0.0"
     "@npmcli/config" "^4.2.1"
     "@npmcli/fs" "^2.1.0"
@@ -1761,8 +1761,8 @@ npm@^8.19.1:
     json-parse-even-better-errors "^2.3.1"
     libnpmaccess "^6.0.4"
     libnpmdiff "^4.0.5"
-    libnpmexec "^4.0.12"
-    libnpmfund "^3.0.3"
+    libnpmexec "^4.0.13"
+    libnpmfund "^3.0.4"
     libnpmhook "^8.0.4"
     libnpmorg "^4.0.4"
     libnpmpack "^4.1.3"
