@@ -2,7 +2,6 @@ import { AppProps } from 'next/app'
 import { createTheme, Theme, ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 
-import GoogleAnalytics from '../components/google-analytics'
 import usePageView from '../hooks/usePageView'
 
 import '../styles/global.scss'
@@ -29,7 +28,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   usePageView()
   return (
     <>
-      <GoogleAnalytics />
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />

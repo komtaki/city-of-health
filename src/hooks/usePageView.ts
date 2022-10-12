@@ -11,9 +11,11 @@ export default function usePageView() {
       pageview(path)
     }
 
+    router.events.on('hashChangeComplete', handleRouteChange)
     router.events.on('routeChangeComplete', handleRouteChange)
 
     return () => {
+      router.events.off('hashChangeComplete', handleRouteChange)
       router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events])
