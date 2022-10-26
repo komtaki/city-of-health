@@ -14,7 +14,7 @@
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.9",
     "@mui/x-data-grid": "^5.17.8",
-    "csv": "^6.2.0",
+    "csv": "^6.2.1",
     "csv-parse": "^5.3.1",
     "next": "latest",
     "npm": "^8.19.2",
