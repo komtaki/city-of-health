@@ -786,9 +786,9 @@ cidr-regex@^3.1.1:
   dependencies:
     ip-regex "^4.1.0"
 
-classnames@^2.2.5:
-  version "2.3.1"
-  resolved "https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz"
+classnames@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
 
 clean-stack@^2.0.0:
   version "2.2.0"
@@ -1991,11 +1991,11 @@ react-is@^18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
 
-react-share@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.npmjs.org/react-share/-/react-share-4.4.0.tgz"
+react-share@^4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/react-share/-/react-share-4.4.1.tgz#4bfb0b512e26afedfea2fb66eb13c95c28fb216a"
   dependencies:
-    classnames "^2.2.5"
+    classnames "^2.3.2"
     jsonp "^0.2.1"
 
 react-transition-group@^4.4.5:
