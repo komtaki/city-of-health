@@ -273,9 +273,9 @@
     prop-types "^15.8.1"
     react-is "^18.2.0"
 
-"@mui/x-data-grid@^5.17.6":
-  version "5.17.6"
-  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-5.17.6.tgz#332483f25725f25e435adba397f276713f6f88a1"
+"@mui/x-data-grid@^5.17.8":
+  version "5.17.8"
+  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-5.17.8.tgz#7d03dc4b4d89af420942bdf4ac05ffbd048efa22"
   dependencies:
     "@babel/runtime" "^7.18.9"
     "@mui/utils" "^5.10.3"
