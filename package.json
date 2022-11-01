@@ -10,7 +10,7 @@
     "ogp": "node --loader ts-node/esm ./bin/ogImage/create.mts"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.4",
+    "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.11",
     "@mui/x-data-grid": "^5.17.8",
