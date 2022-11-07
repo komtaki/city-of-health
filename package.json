@@ -12,7 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.4",
-    "@mui/material": "^5.10.11",
+    "@mui/material": "^5.10.12",
     "@mui/x-data-grid": "^5.17.9",
     "csv": "^6.2.1",
     "csv-parse": "^5.3.1",
