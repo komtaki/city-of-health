@@ -940,21 +940,21 @@ csv-generate@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/csv-generate/-/csv-generate-4.2.1.tgz#2a0c5f0d9a5b6f7a0c1fee40f028707af048b31b"
 
-csv-parse@^5.3.2:
-  version "5.3.2"
-  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-5.3.2.tgz#a8ce2f8dec1b9c1013c9e73c6102fe0d2d436dbb"
+csv-parse@^5.3.2, csv-parse@^5.3.3:
+  version "5.3.3"
+  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-5.3.3.tgz#3b75d2279e2edb550cbc54c65b25cbbf3d0033ad"
 
-csv-stringify@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/csv-stringify/-/csv-stringify-6.2.1.tgz#de4f9940abd8c9780eda41130c737a18d24e5986"
+csv-stringify@^6.2.3:
+  version "6.2.3"
+  resolved "https://registry.yarnpkg.com/csv-stringify/-/csv-stringify-6.2.3.tgz#fefd25e66fd48f8f42f43b85a66a4663a2c3e796"
 
-csv@^6.2.2:
-  version "6.2.2"
-  resolved "https://registry.yarnpkg.com/csv/-/csv-6.2.2.tgz#375020fb5b396fc2919a20f0d4b1b831aa721c4c"
+csv@^6.2.5:
+  version "6.2.5"
+  resolved "https://registry.yarnpkg.com/csv/-/csv-6.2.5.tgz#e01fd3db2f0856a120ae9140bd179c1a186ee2b9"
   dependencies:
     csv-generate "^4.2.1"
-    csv-parse "^5.3.2"
-    csv-stringify "^6.2.1"
+    csv-parse "^5.3.3"
+    csv-stringify "^6.2.3"
     stream-transform "^3.2.1"
 
 debug@4, debug@^4.1.0, debug@^4.3.3:
