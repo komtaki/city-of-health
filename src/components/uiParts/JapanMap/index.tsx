@@ -40,7 +40,7 @@ const JapanMap = () => (
       <div className={cssStyle['area']}>
         <Prefecture id={10} name="群馬" enName="gunma" />
         <Prefecture id={9} name="栃木" enName="tochigi" />
-        <Prefecture id={5} name="茨城" enName="ibaraki" />
+        <Prefecture id={8} name="茨城" enName="ibaraki" />
         <Prefecture id={11} name="埼玉" enName="saitama" />
         <Prefecture id={12} name="千葉" enName="chiba" />
         <Prefecture id={13} name="東京" enName="tokyo" />
