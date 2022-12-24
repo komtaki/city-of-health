@@ -1,6 +1,7 @@
 import fs from 'fs'
 import { join } from 'path'
 import { parse } from 'csv/sync'
+import { DATA_YEAR } from './constants'
 
 const getContents = (filename: string) => {
   const dataDirectory = join(process.cwd(), 'data')
@@ -10,7 +11,7 @@ const getContents = (filename: string) => {
 }
 
 export const getAllFinance = (): Finance[] => {
-  return getContents('/2020.csv').map(
+  return getContents(`/${DATA_YEAR}.csv`).map(
     (record: Array<string | number>, index: number) => {
       return {
         id: index,
