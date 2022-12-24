@@ -9,7 +9,7 @@ services:
       - ./public:/app/public
       - ./src:/app/src
       - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json
       - ./tsconfig.json:/app/tsconfig.json
-      - ./yarn.lock:/app/yarn.lock
     ports:
       - 3000:3000

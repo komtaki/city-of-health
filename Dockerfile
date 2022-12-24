@@ -15,10 +15,10 @@ RUN apk add --no-cache \
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+COPY package.json package-lock.json ./
 
-RUN yarn install
+RUN npm ci
 
 COPY ./ .
 
-ENTRYPOINT [ "yarn", "dev"]
+ENTRYPOINT [ "npm", "run", "dev"]
