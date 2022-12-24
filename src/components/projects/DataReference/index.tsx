@@ -10,7 +10,7 @@ const Reference = () => (
       <Text gutterBottom>下記の政府統計を使用しています。</Text>
       <Text variant="body2" gutterBottom>
         <a href="https://www.soumu.go.jp/iken/zaisei/R03_chiho.html">
-          ・{JAPANESE_YEAR}年({DATA_YEAR}) 地方財政状況調査
+          ・{JAPANESE_YEAR}({DATA_YEAR}) 地方財政状況調査
         </a>
       </Text>
       <Text variant="body2" gutterBottom>
