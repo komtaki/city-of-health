@@ -10,12 +10,8 @@ const getContents = (filename: string) => {
 }
 
 export const getAllFinance = (): Finance[] => {
-  return getContents('/2020.csv')
-    .filter(
-      /** 団体番号で絞り込み */
-      (record: Array<string | number>) => ![6, 7].includes(Number(record[5]))
-    )
-    .map((record: Array<string | number>, index: number) => {
+  return getContents('/2020.csv').map(
+    (record: Array<string | number>, index: number) => {
       return {
         id: index,
         prefectureName: record[1],
@@ -23,7 +19,8 @@ export const getAllFinance = (): Finance[] => {
         power: record[3],
         population: record[8],
       }
-    })
+    }
+  )
 }
 
 export const getFinanceByPrefectureName = (prefectureName: string) => {
