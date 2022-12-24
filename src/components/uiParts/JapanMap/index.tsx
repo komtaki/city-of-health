@@ -11,11 +11,9 @@ type Props = {
 const Prefecture: React.FC<Props> = ({ id, name, enName }) => {
   return (
     <Link href={`/prefectures/${id}/`}>
-      <a>
-        <div className={cssStyle[enName]}>
-          <p>{name}</p>
-        </div>
-      </a>
+      <div className={cssStyle[enName]}>
+        <p>{name}</p>
+      </div>
     </Link>
   )
 }

@@ -15,12 +15,10 @@ const Header: React.FC = () => {
       <MuiContainer maxWidth="md">
         <Box className={cssStyle['wrapper']}>
           <img src="/img/serviceIcon.png" className={cssStyle['serviceIcon']} />
-          <Link href="/">
-            <a className={cssStyle['serviceName']}>
-              <Typography variant="h5" component="div" sx={{ fontWeight: 600 }}>
-                {CMS_NAME}
-              </Typography>
-            </a>
+          <Link href="/" className={cssStyle['serviceName']}>
+            <Typography variant="h5" component="div" sx={{ fontWeight: 600 }}>
+              {CMS_NAME}
+            </Typography>
           </Link>
         </Box>
       </MuiContainer>
