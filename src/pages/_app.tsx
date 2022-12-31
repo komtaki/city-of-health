@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app'
-import { createTheme, Theme, ThemeProvider } from '@mui/material/styles'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 
 import usePageView from '../hooks/usePageView'
