@@ -27,6 +27,7 @@ const Footer = () => {
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeFs26WtYyW1_nFo75FUnZrD0UIUcZQUqLT8fc8XbcPk8P2MQ/viewform?usp=sf_link"
               target="_blank"
+              rel="noreferrer"
             >
               お問い合わせ
             </a>
@@ -34,7 +35,7 @@ const Footer = () => {
         </Grid>
         <Grid item>
           <Typography variant="body2">
-            <a href="https://www.komtaki.com" target="_blank">
+            <a href="https://www.komtaki.com" target="_blank" rel="noreferrer">
               開発者のブログ
             </a>
           </Typography>
