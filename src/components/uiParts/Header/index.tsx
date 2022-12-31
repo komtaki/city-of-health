@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import Divider from '@mui/material/Divider'
 import Box from '@mui/material/Box'
@@ -14,10 +15,12 @@ const Header: React.FC = () => {
     <header>
       <MuiContainer maxWidth="md">
         <Box className={cssStyle['wrapper']}>
-          <img
+          <Image
             src="/img/serviceIcon.png"
             alt={CMS_NAME}
             className={cssStyle['serviceIcon']}
+            width={50}
+            height={50}
           />
           <Link href="/" className={cssStyle['serviceName']}>
             <Typography variant="h5" component="div" sx={{ fontWeight: 600 }}>
