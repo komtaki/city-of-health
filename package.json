@@ -12,26 +12,26 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@mui/material": "^5.11.11",
-    "@mui/x-data-grid": "^5.17.25",
-    "csv": "^6.2.7",
-    "csv-parse": "^5.3.5",
+    "@mui/material": "^5.11.15",
+    "@mui/x-data-grid": "^5.17.26",
+    "csv": "^6.2.8",
+    "csv-parse": "^5.3.6",
     "next": "latest",
-    "npm": "^9.6.0",
+    "npm": "^9.6.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.58.3"
+    "sass": "^1.60.0"
   },
   "devDependencies": {
     "@types/gtag.js": "^0.0.12",
-    "@types/node": "^18.14.5",
-    "@types/react": "^18.0.28",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
     "canvas": "^2.11.0",
-    "eslint": "8.35.0",
-    "eslint-config-next": "13.2.3",
+    "eslint": "8.37.0",
+    "eslint-config-next": "13.2.4",
     "next-sitemap": "^3.1.55",
-    "prettier": "^2.8.4",
+    "prettier": "^2.8.7",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.3"
   }
