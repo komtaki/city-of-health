@@ -88,14 +88,14 @@ const DataTable: React.FC<Props> = ({
       columns={generateColumns(fields)}
       disableColumnFilter
       disableColumnSelector
-      disableSelectionOnClick
+      disableRowSelectionOnClick
       disableDensitySelector
-      pageSize={pageSize}
-      rowsPerPageOptions={[5]}
+      pageSizeOptions={[5]}
       initialState={{
         sorting: {
           sortModel: [{ field: 'power', sort }],
         },
+        pagination: { paginationModel: { page: 0, pageSize } },
       }}
       components={
         requiredToolBar
