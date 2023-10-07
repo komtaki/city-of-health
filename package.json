@@ -16,7 +16,7 @@
     "@mui/x-data-grid": "^6.16.1",
     "csv": "^6.3.4",
     "csv-parse": "^5.5.1",
-    "next": "latest",
+    "next": "^13.5.4",
     "npm": "^10.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
