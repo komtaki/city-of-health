@@ -9,12 +9,12 @@ const Reference = () => (
     <Box marginBottom={3}>
       <Text gutterBottom>下記の政府統計を使用しています。</Text>
       <Text variant="body2" gutterBottom>
-        <a href="https://www.soumu.go.jp/iken/zaisei/R03_chiho.html">
+        <a href="https://www.soumu.go.jp/iken/zaisei/R04_chiho.html">
           ・{JAPANESE_YEAR}({DATA_YEAR}) 地方財政状況調査
         </a>
       </Text>
       <Text variant="body2" gutterBottom>
-        <a href="https://www.e-stat.go.jp/stat-search/files?page=1&layout=datalist&toukei=00200241&tstat=000001039591&cycle=7&year=20220&month=0&tclass1=000001039601&stat_infid=000032224636&result_back=1&cycle_facet=cycle&tclass2val=0">
+        <a href="https://www.e-stat.go.jp/stat-search/files?page=1&layout=datalist&toukei=00200241&tstat=000001039591&cycle=7&year=20230&month=0&tclass1=000001039601&result_back=1&cycle_facet=tclass1%3Acycle&tclass2val=0&metadata=1&data=1">
           ・住民基本台帳に基づく人口、人口動態及び世帯数調査
         </a>
       </Text>
