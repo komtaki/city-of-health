@@ -32,7 +32,7 @@ const columns = [
     type: 'number',
     width: 130,
   },
-]
+] as const
 
 export type FinanceWithRanking = Finance & {
   ranking: number
@@ -97,14 +97,14 @@ const DataTable: React.FC<Props> = ({
         },
         pagination: { paginationModel: { page: 0, pageSize } },
       }}
-      components={
+      slots={
         requiredToolBar
           ? {
-              Toolbar: GridToolbar,
+              toolbar: GridToolbar,
             }
           : {}
       }
-      componentsProps={
+      slotProps={
         requiredToolBar
           ? {
               toolbar: { showQuickFilter: true },
