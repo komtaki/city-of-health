@@ -12,19 +12,19 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@mui/material": "^6.1.5",
-    "@mui/x-data-grid": "^7.21.0",
+    "@mui/material": "^6.1.6",
+    "@mui/x-data-grid": "^7.22.1",
     "csv": "^6.3.10",
     "csv-parse": "^5.5.6",
     "next": "^14.2.16",
     "npm": "^10.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.80.4"
+    "sass": "^1.80.6"
   },
   "devDependencies": {
     "@types/gtag.js": "^0.0.20",
-    "@types/node": "^20.17.0",
+    "@types/node": "^20.17.5",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "canvas": "^2.11.2",
